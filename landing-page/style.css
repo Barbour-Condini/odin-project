@@ -1,0 +1,22 @@
+/* ALL */
+* {
+    border: 1px solid red;
+}
+
+/* HEADER */
+.logo {
+    border: 1px solid blue;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style-type: none;
+}
+
+.links {
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
