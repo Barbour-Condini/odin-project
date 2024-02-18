@@ -1,22 +1,166 @@
 /* ALL */
-* {
-    border: 1px solid red;
+
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body > * {
+    margin: 0 auto 50px auto;
+}
+
+button, .cta {
+    background-color: #3882F6;
+    border-radius: 5px;
+}
+
+.hero, .footer {
+    background-color: #1F2937;
+}
+
+.hero > *, .gallery > *, .testimonial > *, .footer > * {
+    width: 800px;
+    max-width: 80%;
+    margin: auto;
+}
+
+.hero, .cta, .footer, button {
+    color: #F9FAF8;
 }
 
 /* HEADER */
-.logo {
-    border: 1px solid blue;
+.header {
     display: flex;
-    justify-content: space-evenly;
+    /* margin-bottom: 50px; */
+    padding: 10px 0 40px 0;
 }
 
-li {
-    list-style-type: none;
-}
-
+/* LOGO */
 .links {
-    margin-right: auto;
+    margin: 0 0 0 auto;
+    list-style-type: none;
     display: flex;
     justify-content: center;
-    width: 100%;
+    gap: 25px;
+}
+
+/* TITLE */
+/* use media object layout, 
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#media_objects */
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.title-content {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.title-img-box {
+    flex: 1;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
+.title-img-text {
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.main-subtitle, .links {
+    font-size: 18px;
+}
+
+/* GALLERY */
+.gallery {
+    text-align: center;
+}
+
+.gallery-title {
+    padding-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image {
+    width: 100px;
+    column-gap: 10px;
+}
+
+.img-box {
+    flex: none;
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    border: 3px solid blue;
+    border-radius: 10px;
+}
+
+/* TESTIMONIAL */
+.testimonial {
+    padding: 50px 20px;
+    background-color: #E5E7EB;
+}
+
+.quote {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 100;
+    font-style: italic;
+    color: #1F2937;
+}
+
+.quote-source {
+    text-align: right;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* CTA */
+.cta {
+    display: flex;
+    padding: 30px;
+    width: 800px;
+    max-width: 80%;
+}
+
+.signup {
+    margin-left: auto;
+    padding: 5px 15px;
+} 
+
+/* FOOTER */
+.footer {
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+.copyright {
+    text-align: center;
 }
